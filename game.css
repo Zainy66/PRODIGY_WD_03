@@ -1,70 +1,97 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-.container{
-    width: 100%;
-    height: 100vh;
-    background-color: #09424C;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+body {
+  background-color: #ffe3f1;
 }
 
-.instructor{
-    position: absolute;
-    top:40px;
-    font-size: 60px;
-    color:white;
+#player-turn {
+  text-align: center;
+  font-size: 48px;
+  margin-top: 25px;
 }
 
-.game{
-    display: grid;
-    grid-template-columns: auto auto auto;
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 22vmin);
+  grid-template-rows: repeat(3, 22vmin);
+  gap: 5px;
+  place-content: center;
+  width: 90%;
+  margin: 40px auto;
+}
+ .container {
+  display: grid;
+  grid-template-columns: repeat(3, 22vmin);
+  grid-template-rows: repeat(3, 22vmin);
+  gap: 5px;
+  place-content: center;
+  width: 90%;
+  margin: 40px auto;
+ }
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 56px;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 1px;
 }
 
-.cell{
-    height: 80px;
-    width: 80px;
-    border: 2px solid black;
-    font-size: 60px;
-    text-align: center;
-    color: white;
-    cursor: pointer;
+.x{
+  color: #80c6ff;
 }
 
-.game-over{
-    width: 60%;
-    height: 80vh;
-    background: rgba(255,255,255,0.5);
-    position: fixed;
-    border-radius: 14px;
-    backdrop-filter: blur(0.1rem);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.o{
+  color: #f50057;
 }
 
-.reset{
-    border:none;
-    font-size: 18px;
-    padding: 10px 12px;
-    border-radius: 6px;
-    font-weight: 200;
-    background-color: rgb(31, 136, 177);
-    cursor: pointer;
-    transition: all 0.2s ease;
+.popup {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(18, 0, 66);
+  position: absolute;
+  top: 0;
+  opacity: 0.9;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.reset:hover{
-    font-size:20px;
+#message {
+  text-align: center;
+  color: rgb(197, 48, 172);
+  font-size: 56px;
+  font-weight: bold;
+  margin: 10px 0px;
 }
 
-.result{
-    padding: 50px;
-    font-size: 50px;
+#new-game {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  transition-duration: 0.3s;
+  border-style: solid;
+  border-width: 1px;
+  background-color: white;
+}
+
+#new-game:hover {
+  transform: scale(1.1);
+}
+
+.hide {
+  display: none;
 }
